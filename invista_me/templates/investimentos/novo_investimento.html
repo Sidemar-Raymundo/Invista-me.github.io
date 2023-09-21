@@ -1,0 +1,19 @@
+{% extends 'investimentos/base.html' %}
+{% block conteudo %}
+{% load crispy_forms_tags %}
+<div class="container">
+    <h1>Formulario Novo Investimento</h1>
+    <form action="" method="POST"> 
+        {% csrf_token %}
+         {{formulario | crispy}}
+          <!--  Esses dois textos abaixo estão comentados devido a continuidade do codigo que de desenvolve criando investimentos dinamicos -->
+         <!--  <label for="">tipo investimento</label>  -->
+        <!--  <input type="text" name='TipoInvestimento'>   -->
+        <button type="submit" class="btn btn-success">Salvar</button> 
+    </form>
+</div>
+{% endblock %}
+
+
+
+
